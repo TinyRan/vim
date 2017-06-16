@@ -1,11 +1,15 @@
 set ts=4
 set nu
 set rtp+=~/.vim/bundle/Vundle.vim
+
+
 call vundle#begin()
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'DoxygenToolkit.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'git://github.com/scrooloose/nerdtree.git'
+call vundle#end()
+
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 "开启molokai颜色
