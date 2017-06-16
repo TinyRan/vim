@@ -2,7 +2,6 @@ set ts=4
 set nu
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle' 
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'DoxygenToolkit.vim'
 Plugin 'Valloric/YouCompleteMe'
