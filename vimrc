@@ -1,11 +1,11 @@
 set ts=4
 set nu
-set rtp+=~/.vim/bundle/vundle/ 
-call vundle#rc()
-Bundle 'gmarik/vundle' 
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'DoxygenToolkit.vim'
-Bundle 'Valloric/YouCompleteMe'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle' 
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'DoxygenToolkit.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'git://github.com/scrooloose/nerdtree.git'
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
