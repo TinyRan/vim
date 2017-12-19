@@ -1,14 +1,37 @@
 set ts=4
 set nu
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set nocompatible                " be iMproved
+filetype off                    " required!
 
 
 call vundle#begin()
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'DoxygenToolkit.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'git://github.com/scrooloose/nerdtree.git'
+	Bundle 'gmarik/vundle'
+	"my Bundle here:
+	""
+" original repos on github
+Bundle 'kien/ctrlp.vim'
+Bundle 'sukima/xmledit'
+Bundle 'sjl/gundo.vim'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'klen/python-mode'
+Bundle 'Valloric/ListToggle'
+Bundle 'SirVer/ultisnips'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
+Bundle 't9md/vim-quickhl'
+" Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdcommenter'
+	" "..................................
+	" " vim-scripts repos
+Bundle 'YankRing.vim'
+Bundle 'vcscommand.vim'
+Bundle 'ShowPairs'
+Bundle 'SudoEdit.vim'
+Bundle 'EasyGrep'
+Bundle 'VOoM'
+Bundle 'VimIM'
 call vundle#end()
 
 map <F2> :NERDTreeToggle<CR>
@@ -53,6 +76,9 @@ nmap <F8> :TagbarToggle<CR>
 "let g:tagbar_phpctags_bin='PATH_TO_phpctags'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+
 
 " 插入匹配括号
 "inoremap ( ()<LEFT>
