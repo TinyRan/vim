@@ -1,10 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/etc/ssl/certs'
-let g:netrw_dirhist_2='/mnt/hgfs/Share/mod/.git'
-let g:netrw_dirhist_3='/mnt/hgfs/Share/mod/mod/controllers'
-let g:netrw_dirhist_4='/data/www/kingsun/environments'
-let g:netrw_dirhist_5='/data/www/kingsun/environments/testing'
-let g:netrw_dirhist_6='/data/www/kingsun/environments/testing/mod'
-let g:netrw_dirhist_7='/data/www/kingsun/environments/testing/mod/config'
-let g:netrw_dirhist_8='/home/lanshiliang/workspace/YJXHD/Server/CommonServer'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/lanshiliang/workspace/projx/server/TeachBookServer'

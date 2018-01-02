@@ -39,7 +39,7 @@ import ycm_core
 flags = [
 '-Wall',
 '-Wextra',
-'-Werror',
+# '-Werror',
 '-Wno-long-long',
 '-Wno-variadic-macros',
 '-fexceptions',
@@ -58,19 +58,29 @@ flags = [
 '-isystem',
 '/usr/local/tars/cpp/include',
 '-isystem',
+'/usr/include/c++/5.4.0',
+'-isystem',
 get_python_inc(),
 '-isystem',
 '../llvm/include',
 '-isystem',
 '../llvm/tools/clang/include',
 '-I',
+'../../TeachBookServer',
+'-I',
 '.',
+'-I',
+'../util',
+'-I',
+'../../util',
+'-I',
+'../../common',
 '-I',
 './ClangCompleter',
 '-isystem',
-'./tests/gmock/gtest',
+'/home/lanshiliang/workspace/googletest/googletest',
 '-isystem',
-'./tests/gmock/gtest/include',
+'/home/lanshiliang/workspace/googletest/googletest/include',
 '-isystem',
 './tests/gmock',
 '-isystem',
@@ -83,7 +93,7 @@ get_python_inc(),
 # which is required for compiling the standard library, and to 'c++11' for older
 # versions.
 if platform.system() != 'Windows':
-  flags.append( '-std=c++11' )
+  flags.append( '-std=c++14' )
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the

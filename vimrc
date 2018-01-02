@@ -1,40 +1,42 @@
+syntax on
 set ts=4
 set nu
 set rtp+=~/.vim/bundle/vundle/
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible                " be iMproved
-filetype off                    " required!
+filetype on                    " required!
+
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 
 call vundle#begin()
-	Bundle 'gmarik/vundle'
-	"my Bundle here:
-	""
+Bundle 'gmarik/vundle'
+"my Bundle here:
+""
 " original repos on github
 Bundle 'kien/ctrlp.vim'
 Bundle 'sukima/xmledit'
 Bundle 'sjl/gundo.vim'
 Bundle 'jiangmiao/auto-pairs'
-Bundle 'klen/python-mode'
 Bundle 'Valloric/ListToggle'
 Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
 Bundle 't9md/vim-quickhl'
 " Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdcommenter'
 	" "..................................
 	" " vim-scripts repos
-Bundle 'YankRing.vim'
 Bundle 'vcscommand.vim'
 Bundle 'ShowPairs'
 Bundle 'SudoEdit.vim'
 Bundle 'EasyGrep'
-Bundle 'VOoM'
-Bundle 'VimIM'
+Bundle 'scrooloose/nerdtree'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
-map <F2> :NERDTreeToggle<CR>
+map <F5> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 "开启molokai颜色
 colorscheme molokai
@@ -44,8 +46,12 @@ let g:rehash256 = 1
 set t_Co=256
 set background=dark
 
-autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2 
-autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
+"syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2  
+"syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1  
+"hi cFunctions gui=NONE cterm=bold  ctermfg=yellow  "))"
+
+"autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2 
+"autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
 
 hi cfunctions ctermfg=81
 hi Type ctermfg=118 cterm=none 
@@ -62,7 +68,9 @@ set incsearch
 set autoindent                       "vim使用自动对齐，也就是把当前行的对齐格式应用到下一行(自动缩进）
 set cindent                             "（cindent是特别针对 C语言语法自动缩进）
 set smartindent                    "依据上面的对齐格式，智能的选择对齐方式，对于类似C语言编写上有用   
+set ignorecase					"忽略搜索大小写
 
+"设置注释
 let g:DoxygenToolkit_briefTag_funcName = "yes"
 let g:DoxygenToolkit_commentType = "PHP"
 let g:DoxygenToolkit_paramTag_pre = "@param "
@@ -72,15 +80,10 @@ let g:DoxygenToolkit_authorTag = "@author "
 let g:DoxygenToolkit_authorName = "shiliang.lan"
 let g:doxygen_enhanced_color = 1
 "let g:load_doxygen_syntax = 1
-nmap <F8> :TagbarToggle<CR>
-"let g:tagbar_phpctags_bin='PATH_TO_phpctags'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-"let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 
-
-" 插入匹配括号
-"inoremap ( ()<LEFT>
-"inoremap [ []<LEFT>
-"inoremap { {}<LEFT>
+"关闭ycm错误语法提示
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
