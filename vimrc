@@ -17,21 +17,10 @@ Bundle 'gmarik/vundle'
 ""
 " original repos on github
 Bundle 'kien/ctrlp.vim'
-Bundle 'sukima/xmledit'
-Bundle 'sjl/gundo.vim'
 Bundle 'jiangmiao/auto-pairs'
-Bundle 'Valloric/ListToggle'
-Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 't9md/vim-quickhl'
-" Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdcommenter'
-	" "..................................
-	" " vim-scripts repos
-Bundle 'vcscommand.vim'
 Bundle 'ShowPairs'
-Bundle 'SudoEdit.vim'
-Bundle 'EasyGrep'
 Bundle 'scrooloose/nerdtree'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
@@ -87,3 +76,9 @@ let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 "关闭ycm错误语法提示
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
+
+"let Tlist_Auto_Open = 1 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Show_One_File = 1 
+let Tlist_Exit_OnlyWindow = 1 
+let Tlist_Use_Right_Window = 1
