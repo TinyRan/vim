@@ -1,7 +1,9 @@
 syntax on
-set ts=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set nu
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible                " be iMproved
 filetype on                    " required!
@@ -22,10 +24,11 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'ShowPairs'
 Bundle 'scrooloose/nerdtree'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
 map <F5> :NERDTreeToggle<CR>
+noremap <F8> :TlistToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 "开启molokai颜色
 colorscheme molokai
@@ -34,13 +37,6 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 set t_Co=256
 set background=dark
-
-"syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2  
-"syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1  
-"hi cFunctions gui=NONE cterm=bold  ctermfg=yellow  "))"
-
-"autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2 
-"autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
 
 hi cfunctions ctermfg=81
 hi Type ctermfg=118 cterm=none 
