@@ -2,6 +2,8 @@ syntax on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set expandtab
+set autoindent
 set nu
 set rtp+=~/.vim/bundle/Vundle.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -11,6 +13,7 @@ filetype on                    " required!
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+nnoremap <F3> :set hlsearch!<CR>
 
 
 call vundle#begin()
