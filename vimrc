@@ -4,7 +4,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-set nu
+"set nu
 set rtp+=~/.vim/bundle/Vundle.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible                " be iMproved
@@ -81,3 +81,10 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1 
 let Tlist_Exit_OnlyWindow = 1 
 let Tlist_Use_Right_Window = 1
+
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936
+set fileencoding=utf-8
+set termencoding=utf-8
+set tags+=~/tags
+set autochdir
