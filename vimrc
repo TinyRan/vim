@@ -17,17 +17,17 @@ nnoremap <F3> :set hlsearch!<CR>
 
 
 call vundle#begin()
-Bundle 'gmarik/vundle'
-"my Bundle here:
-""
-" original repos on github
-Bundle 'kien/ctrlp.vim'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'ShowPairs'
-Bundle 'scrooloose/nerdtree'
-Bundle 'octol/vim-cpp-enhanced-highlight'
+    Bundle 'gmarik/vundle'
+    "my Bundle here:
+    ""
+    " original repos on github
+    Bundle 'kien/ctrlp.vim'
+    Bundle 'jiangmiao/auto-pairs'
+    Bundle 'Valloric/YouCompleteMe'
+    Bundle 'scrooloose/nerdcommenter'
+    Bundle 'ShowPairs'
+    Bundle 'scrooloose/nerdtree'
+    Bundle 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
 map <F5> :NERDTreeToggle<CR>
@@ -88,3 +88,7 @@ set fileencoding=utf-8
 set termencoding=utf-8
 set tags+=~/tags
 set autochdir
+" 当光标一段时间保持不动了，就禁用高亮
+autocmd cursorhold * set nohlsearch
+set hlsearch
+:set ff=unix
