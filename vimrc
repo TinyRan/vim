@@ -28,9 +28,10 @@ call vundle#begin()
     Bundle 'ShowPairs'
     Bundle 'scrooloose/nerdtree'
     Bundle 'octol/vim-cpp-enhanced-highlight'
+    Bundle 'Yggdroot/LeaderF'
+    Bundle 'fatih/vim-go'
 call vundle#end()
 
-map <F5> :NERDTreeToggle<CR>
 noremap <F8> :TlistToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 "开启molokai颜色
@@ -54,7 +55,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "定位查找
 set incsearch 
 set autoindent                       "vim使用自动对齐，也就是把当前行的对齐格式应用到下一行(自动缩进）
-set cindent                             "（cindent是特别针对 C语言语法自动缩进）
+"set cindent                             "（cindent是特别针对 C语言语法自动缩进）
 set smartindent                    "依据上面的对齐格式，智能的选择对齐方式，对于类似C语言编写上有用   
 set ignorecase					"忽略搜索大小写
 
@@ -92,3 +93,11 @@ set autochdir
 autocmd cursorhold * set nohlsearch
 set hlsearch
 :set ff=unix
+let Tlist_Inc_Winwidth=0
+let Tlist_Use_Right_Window=1
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Exit_OnlyWindow=1
+map <F4> :NERDTreeToggle<CR>
+let NERDTreeWinPos="left"
+
+let g:go_version_warning = 0

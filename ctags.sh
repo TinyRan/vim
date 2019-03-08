@@ -4,3 +4,4 @@ ctags -R --languages=c++ -f /home/launce/tags \
     /home/launce/work/server/PSH/ \
     /home/launce/work/DDB/ \
     /home/launce/work/PROJX/ \
+    /usr/include/c++/5 \
