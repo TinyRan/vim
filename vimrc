@@ -4,12 +4,12 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+set backspace=2
 "set nu
 set rtp+=~/.vim/bundle/Vundle.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible                " be iMproved
 filetype on                    " required!
-
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -18,9 +18,6 @@ nnoremap <F3> :set hlsearch!<CR>
 
 call vundle#begin()
     Bundle 'gmarik/vundle'
-    "my Bundle here:
-    ""
-    " original repos on github
     Bundle 'kien/ctrlp.vim'
     Bundle 'jiangmiao/auto-pairs'
     Bundle 'Valloric/YouCompleteMe'
@@ -76,6 +73,9 @@ let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 "关闭ycm错误语法提示
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
+"c++11
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 
 "let Tlist_Auto_Open = 1 
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
@@ -89,6 +89,7 @@ set fileencoding=utf-8
 set termencoding=utf-8
 set tags+=~/tags
 set autochdir
+set ff=unix
 " 当光标一段时间保持不动了，就禁用高亮
 autocmd cursorhold * set nohlsearch
 set hlsearch
@@ -101,3 +102,4 @@ map <F4> :NERDTreeToggle<CR>
 let NERDTreeWinPos="left"
 
 let g:go_version_warning = 0
+let g:go_fmt_command = "goimports"
